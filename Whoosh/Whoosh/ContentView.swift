@@ -9,13 +9,21 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "car")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        ZStack {
+            Color.indigo.edgesIgnoringSafeArea(.all)
+            VStack {
+                AppTitle()
+            }
         }
-        .padding()
+    }
+}
+
+struct AppTitle: View {
+    var body: some View {
+        VStack {
+            Text("Hello Whoosh!").font(.title).fontWeight(.bold).padding()
+            Text("Loading").font(.callout).fontWeight(.light)
+        }
     }
 }
 
