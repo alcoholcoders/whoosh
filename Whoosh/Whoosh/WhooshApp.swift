@@ -2,7 +2,7 @@
 //  WhooshApp.swift
 //  Whoosh
 //
-//  Created by Mun Jun Sang on 2022/10/17.
+//  Created by 원동규 on 2022/10/21.
 //
 
 import SwiftUI

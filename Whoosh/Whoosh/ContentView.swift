@@ -2,21 +2,23 @@
 //  ContentView.swift
 //  Whoosh
 //
-//  Created by Mun Jun Sang on 2022/10/17.
+//  Created by 원동규 on 2022/10/21.
 //
-
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "car")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+    @AppStorage("onboarding") var isOnboardingActive: Bool = true
+        var body: some View {
+            ZStack {
+                Color.accentColor
+                    .ignoresSafeArea()
+                if isOnboardingActive {
+                    OnboardingView()
+                } else {
+                    HomeView()
+                }
+            }
         }
-        .padding()
-    }
 }
 
 struct ContentView_Previews: PreviewProvider {
